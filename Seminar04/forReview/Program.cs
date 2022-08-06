@@ -67,6 +67,7 @@ Console.WriteLine($"The sum of the digits of {userNum} is {ssum}");
 // TASK 3. An array of eight elements
 // Конечно, задача в разы короче, но я хотел попробовать немного повзаимодействовать с пользователем ))
 
+
 void ShowArray(int[] array)
 {
     Console.ForegroundColor = ConsoleColor.Green;
@@ -94,6 +95,13 @@ int[] userArray = new int[size];
 Console.Write("Would you like to fill in the array yourself? (Yes / No) -");
 string usersDecision = Console.ReadLine();
 
+for (int count = 0; usersDecision != "Yes" && usersDecision != "No" && count < 3; count++)
+    {
+        Console.WriteLine("Just tell me, do you want to fill in this array yourself?");
+        Console.Write($"You have {3-count} lives left. Yes or No: ");
+        usersDecision = Console.ReadLine();
+    }
+
 if (usersDecision == "Yes")
 {
     for (int i = 0; i < size; i++)
@@ -116,12 +124,5 @@ if (usersDecision == "No")
     ShowArray(userArray);
 
 }
-
-for (int count = 0; usersDecision != "Yes" && usersDecision != "No" && count < 3; count++)
-    {
-        Console.WriteLine("Just tell me, do you want to fill in this array yourself?");
-        Console.Write($"You have {3-count} lives left. Yes or No: ");
-        usersDecision = Console.ReadLine();
-    }
-
 Console.WriteLine("That's all. Try again, if you want");
+

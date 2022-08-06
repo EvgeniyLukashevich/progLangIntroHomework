@@ -27,6 +27,13 @@ int[] userArray = new int[size];
 Console.Write("Would you like to fill in the array yourself? (Yes / No) -");
 string usersDecision = Console.ReadLine();
 
+for (int count = 0; usersDecision != "Yes" && usersDecision != "No" && count < 3; count++)
+    {
+        Console.WriteLine("Just tell me, do you want to fill in this array yourself?");
+        Console.Write($"You have {3-count} lives left. Yes or No: ");
+        usersDecision = Console.ReadLine();
+    }
+
 if (usersDecision == "Yes")
 {
     for (int i = 0; i < size; i++)
@@ -49,12 +56,5 @@ if (usersDecision == "No")
     ShowArray(userArray);
 
 }
-
-for (int count = 0; usersDecision != "Yes" && usersDecision != "No" && count < 3; count++)
-    {
-        Console.WriteLine("Just tell me, do you want to fill in this array yourself?");
-        Console.Write($"You have {3-count} lives left. Yes or No: ");
-        usersDecision = Console.ReadLine();
-    }
-
 Console.WriteLine("That's all. Try again, if you want");
+
