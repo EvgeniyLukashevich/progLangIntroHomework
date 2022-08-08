@@ -5,6 +5,7 @@ int SecondDigitSearch(int num)
     int secDigit = (num / 10) % 10;
     return secDigit;
 }
+
 Console.Write("Please, input a positiv three-digit integer: ");
 int num = Convert.ToInt32(Console.ReadLine());
 if(num > 99 && num < 1000)
@@ -24,6 +25,7 @@ int ThirdDigitSearch(int num)
         num = num / 10;
     return num % 10; 
 }
+
 Console.Write("Please, input a positiv integer: ");
 int num = Convert.ToInt32(Console.ReadLine());
 if(num > 99)

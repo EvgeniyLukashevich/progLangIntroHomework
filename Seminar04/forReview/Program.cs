@@ -89,6 +89,22 @@ int[] GenerateArray(int size, int minValue, int maxValue)
     return array;
 }
 
+int[] CreateUserArray(int size)
+{
+    int [] array = new int[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.Write($"Input the {i+1} integer: ");
+        Console.ResetColor();
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+
+    return array;
+}
+
+
 int size = 8, minValue, maxValue;
 int[] userArray = new int[size];
 
@@ -110,13 +126,7 @@ for (int count = 0; usersDecision != "Yes" && usersDecision != "No" && count < 3
 
 if (usersDecision == "Yes")
 {
-    for (int i = 0; i < size; i++)
-    {
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.Write($"Input the {i+1} integer: ");
-        Console.ResetColor();
-        userArray[i] = Convert.ToInt32(Console.ReadLine());
-    }
+    userArray = CreateUserArray(size);
     
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.Green;

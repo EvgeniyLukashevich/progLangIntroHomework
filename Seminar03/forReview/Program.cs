@@ -26,6 +26,7 @@ bool Palindrome (int num)
 {
     int reverseNum = 0;
     int temp = num;
+    
     while (temp > 0)
     {
         reverseNum = reverseNum * 10;
@@ -36,6 +37,7 @@ bool Palindrome (int num)
     if (reverseNum == num) return true;
     else return false;
 }
+
 Console.Write("Please, input your number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 bool result = Palindrome(num);
@@ -52,6 +54,7 @@ double DistanceBtwnTwoPoints(int xa, int ya, int za, int xb, int yb, int zb)
     double dist = Math.Sqrt((xb-xa) * (xb-xa) + (yb-ya) * (yb-ya) + (zb-za) * (zb-za));
     return dist;
 }
+
 Console.Write("Please, input 1st point x-axis: ");
 int xa = Convert.ToInt32(Console.ReadLine());
 Console.Write("Please, input 1st point y-axis: ");
