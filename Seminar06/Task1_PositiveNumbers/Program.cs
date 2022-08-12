@@ -1,6 +1,6 @@
 ﻿// TASK 1. Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь. 
 
-int PositiveNums(int count)
+int GreaterThanZero(int count)
 {
     int result = 0;
     int num;
@@ -17,8 +17,8 @@ int PositiveNums(int count)
 }
 
 int count = 5;
-int result = PositiveNums(count);
+int result = GreaterThanZero(count);
 
 Console.WriteLine();
-Console.WriteLine($"There are {result} positive numbers among the numbers you input");
+Console.WriteLine($"There are {result} greater than zero numbers among the numbers you input");
 Console.WriteLine();
