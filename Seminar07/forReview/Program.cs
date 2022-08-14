@@ -99,8 +99,6 @@ Console.WriteLine();
 // TASK 3. Задайте двумерный массив из целых чисел. 
 // Найдите среднее арифметическое элементов в каждом столбце
 
-// Уверен, что задача решается проще. Обязательно придумаю такое решение,
-// но пока не могу выделить на это время
 
 int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
 {
@@ -127,7 +125,7 @@ void Show2dArray(int[,] array)
     Console.WriteLine();
 }
 
-double[] MeanOfTheColimn(int[,] array)
+double[] MeanOfTheColumn(int[,] array)
 {
     double[] newArray = new double[array.GetLength(1)];
     int sum = 0, i = 0;
@@ -153,7 +151,7 @@ int[,] array = CreateRandom2dArray(m, n, min, max);
 
 Show2dArray(array);
 
-double[] newArray = MeanOfTheColimn(array);
+double[] newArray = MeanOfTheColumn(array);
 
 for (int i = 0; i < newArray.Length; i++)
     Console.WriteLine($"Arithmetic mean of the {i + 1} column is {newArray[i]}");
